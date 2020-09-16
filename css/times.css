@@ -1,0 +1,146 @@
+
+
+*,
+*::after,
+*::before{
+    padding: 0;
+    margin: 0;
+    box-sizing: border-box;
+}
+
+
+html{
+
+    font-size: 16px;
+    line-height: 1.6;
+    font-family: 'Montserrat', Arial, sans-serif;
+    /* font-family: font stack required for body text */
+}
+h1, h2, h3, h4{
+    font-size: 2.5rem;  /* Use rem to define font sizes */
+    font-weight:bold;
+    font-family: 'Caveat', Arial, serif;
+    /*font-family: font stack required for headings */
+}
+p{
+    font-size: 1.2rem;  /* Use rem to define font sizes */
+    padding-top: 20px;
+
+}
+p::first-letter {
+    /* This was added to make each paragraph easier to identify */
+    font-weight:bold;   /* Bold the first letter of each paragraph */
+    font-size: 150%;    /* Enlarge the first letter of each paragraph */
+    color: hsl(13, 91%, 75%);   /* Change the color of the first letter of each paragraph */
+  }
+.container{
+    /* The following code is used to center the entire page */
+    position: absolute;
+    left: 0;
+    right: 0;
+    margin: auto;
+    max-width: 1500px;  /* have a max-width of 1500px */
+    line-height: 1.5;
+}
+.subnav{
+    background-color: hsl(200, 43%, 3%);
+    display: flexbox;   /* use Flexbox to make the links align */
+    text-align: right;  /* SubNav menu aligns to the right */
+}
+.subnav a{
+    color:hsl(200, 43%, 90%);
+    padding-right: 20px;
+}
+.subnav a:hover{
+    /* The underline disappears when the mouse clicks over the link. */
+    text-decoration: none;  
+}
+.mainnav{
+    margin: 0 auto;
+    padding: 20px 0;
+    display: flexbox;   /* use Flexbox to make the links align */
+    background-color: hsl(226, 8%, 18%);
+    text-align:center;
+}
+.mainnav a{
+    color:hsl(29, 96.4%, 45%);
+    font-size: 1.8rem;
+    padding: 0 60px;    /* Increase the spacing between links */
+}
+.mainnav a:hover{
+    /* The underline disappears when the mouse clicks over the link. */
+    text-decoration: none;
+}
+.masthead{
+    padding: 50px;
+    background-color: hsl(226, 100.0%, 3.3%);
+}
+.times-logo{
+    width: 100%;
+    height: 100%;
+}
+.masthead h1{
+    font-size: 3rem;
+    text-align: center;
+    color:hsl(200, 43%, 70%);
+}
+.content{
+}
+.content .story{
+    padding: 30px 100px;
+    background-color: hsl(29, 96.4%, 45%);
+}
+.story.lead-story{
+    background-color: hsl(13, 91%, 35%);
+}
+h1.story-title{
+    color:hsl(200, 43%, 70%);
+}
+.story img{
+    width: 300px;   /* Keep the image size to 30px */
+    float: left;    /* Float the image to the left of the text */
+    margin: 20px 30px 20px 0;   /* Increase the space around the image */
+}
+.story p{
+    color: hsl(13, 91%, 90%);
+
+}
+.story blockquote{
+    quotes: "\201E" "\201D";
+    color: hsl(13, 91%, 80%);
+    padding-top: 20px;
+    font-size: 1.2rem;
+    font-weight:bold;   /* Blockquote is bold to distinguish it from paragraphs */
+}
+.story blockquote::before{
+    content: open-quote;
+}
+.story blockquote::after{
+    content: close-quote;
+}
+.story p.byline{
+    
+}
+p.byline span.author{
+    
+}
+p.byline span.pub{
+    
+}
+.foot{
+    border: 1px solid hsl(226, 8%, 18%);
+    background-color: hsl(226, 8%, 18%);
+}
+.foot p{
+    padding-top: 0;
+    text-align: center;
+    color:hsl(200, 43%, 70%);
+    
+}
+
+@media screen and (max-width: 1000px){
+    .mainnav a{
+        font-size: 1.5rem;
+        padding:30px;
+    }
+}
